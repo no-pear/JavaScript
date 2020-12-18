@@ -1,0 +1,20 @@
+{
+  "name": "mytypeScript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx tsc --locale zh-CN"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.0.2"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.161",
+    "lodash": "^4.17.20"
+  }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let foo = 100;
+
+        // async function main (){
+        //     // foo = foo + await Promise.resolve(10);
+        //     foo = await Promise.resolve(10) + foo;
+
+        //     console.log("main -> foo", foo)
+        // }
+        // main();
+
+        // foo++;
+        // console.log("foo", foo)
+
+        // let p = Promise.resolve();
+
+        // p.then(() => {
+        //     console.log("then1");
+        //     Promise.resolve().then(() => {
+        //         console.log("then1-1");
+        //     });
+        // }).then(() => {
+        //     console.log("then1-2");
+        // });
+
+        // p.then(() => {
+        //     console.log("then2");
+        // });
+
+
+        Promise.resolve()
+            .then(() => {
+                console.log("then1");
+                Promise.resolve()
+                    .then(() => {
+                        console.log("then1-1");
+                        return Promise.resolve()
+                    })
+                    .then(() => {
+                        console.log("then1-2");
+                    });
+            })
+            .then(() => {
+                console.log("then2");
+            })
+            .then(() => {
+                console.log("then3");
+            })
+            .then(() => {
+                console.log("then4");
+            });
+    </script>
+</body>
+
+</html>

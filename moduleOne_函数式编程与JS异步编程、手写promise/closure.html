@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /**
+         * 生成求多少次方的函数
+         * power 幂
+         * value 值
+        */
+        const makePower = (power)=>{
+            return function (value) {
+                return Math.pow(value, power);
+            }
+        }
+
+        //求平方
+        const square = makePower(2);
+        //求立方
+        const cube = makePower(3);
+
+        console.log(square(3))
+        console.log(cube(5))
+
+    </script>
+</body>
+</html>
